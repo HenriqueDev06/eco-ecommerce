@@ -2,10 +2,10 @@ import React, { FC } from 'react';
 
 import { Container } from './styles';
 
-const SpaceX: FC = () => (
+const NavBar: FC = () => (
   <Container>
-    <p>spacex </p>
+    <p>NavBar </p>
   </Container>
 );
 
-export { SpaceX };
+export { NavBar };
