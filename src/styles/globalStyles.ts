@@ -7,6 +7,8 @@ export default createGlobalStyle`
     outline: 0;
     box-sizing: border-box;
     font-family: 'Poppins';
+
+    color: #e6e8e7;
   }
 
   *::before,
@@ -20,6 +22,8 @@ export default createGlobalStyle`
     text-rendering: optimizeSpeed;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+
+    overflow-x: hidden;
   }
 
   ul,

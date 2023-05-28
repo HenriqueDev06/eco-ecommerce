@@ -2,5 +2,9 @@
 **/*.js
 node_modules
 build
-/src/react-app-env.d.ts
-/src/reportWebVitals.ts
+*.ts
+*.tsx
+/*.ts
+/*.tsx
+**/*.tsx
+**/*.ts

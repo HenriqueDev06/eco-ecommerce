@@ -1,10 +1,13 @@
 import React, { FC } from 'react';
 
 import { Container } from './styles';
+import { NavBar } from '../../components/navbar';
+import Header from '../../components/header';
 
 const Home: FC = () => (
   <Container>
-    <p>first page works! </p>
+    <NavBar />
+    <Header />
   </Container>
 );
 
