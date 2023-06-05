@@ -2,6 +2,13 @@ import React, { FC } from 'react';
 import { Container, Content } from './styles';
 
 const Header: FC = () => {
+  const handleScroll = () => {
+    window.scrollBy({
+      top: 1000,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <Container>
       <Content>
@@ -9,7 +16,7 @@ const Header: FC = () => {
         <span>
           Aqui você encontra tudo para se tornar um influenciador digital
         </span>
-        <button>ver produtos</button>
+        <button onClick={handleScroll}>ver produtos</button>
       </Content>
 
       <img

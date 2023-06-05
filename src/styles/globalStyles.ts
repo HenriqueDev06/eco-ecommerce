@@ -16,6 +16,24 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
+  body::-webkit-scrollbar {
+  width: 6px; /* largura da barra de rolagem */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(22,22,22); /* cor do fundo da barra de rolagem */
+}
+
+body::-webkit-scrollbar-thumb {
+  transition: 0.4s ease;
+  background: #fa8339; /* cor do corpo da barra de rolagem */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #ad551d
+; /* cor do corpo da barra de rolagem ao passar o mouse */
+}
+
   body {
     min-height: 100vh;
     scroll-behavior: smooth;
@@ -24,6 +42,9 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
 
     overflow-x: hidden;
+
+    background: rgb(13,0,23);
+background: radial-gradient(circle, rgba(13,0,23,1) 0%, rgba(0,0,0,1) 100%);
   }
 
   ul,

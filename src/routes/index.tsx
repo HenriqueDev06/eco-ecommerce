@@ -1,13 +1,29 @@
-import React, { FC } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React, { FC, useEffect } from 'react';
+import { Switch, Route, useLocation } from 'react-router-dom';
 
-import { Home } from '../pages';
+import { Home, ProductsPage, ProductInfoPage, CartPage } from '../pages';
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 const Routes: FC = () => {
   return (
-    <Switch>
-      <Route path="/" exact component={Home} />
-    </Switch>
+    <>
+      <ScrollToTop />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/produtos/:categorie?" exact component={ProductsPage} />
+        <Route path="/produto/:id" exact component={ProductInfoPage} />
+        <Route path="/carrinho" exact component={CartPage} />
+      </Switch>
+    </>
   );
 };
 

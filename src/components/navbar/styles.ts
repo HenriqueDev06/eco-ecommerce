@@ -18,37 +18,71 @@ export const Buttons = styled.div<{ isOpen: boolean }>`
     transition: 1.4s ease;
 
     font-family: 'Poppins';
-    border: 0;
+
+    border-width: 1px;
+    border-color: transparent;
     outline: 0;
     cursor: pointer;
 
     margin: 0 10px;
+    transition: 0.4s ease;
 
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
+  button {
+    :hover {
+      border-bottom-color: white;
+    }
+  }
+
   button#cart {
     background: #212121;
-    padding: 8px 12px;
+    padding: 8px 22px;
     border-radius: 4px;
 
     svg {
       margin-left: 5px;
     }
+
+    position: relative;
+
+    :hover {
+      border-color: #eb8a3f;
+    }
+
+    ::before {
+      content: attr(data-itens);
+      position: absolute;
+      top: calc(50% - 10px);
+      right: -8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      background-color: #eb8a3f;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      border-radius: 2px;
+    }
   }
 `;
 
-export const Container = styled.nav<{ isOpen: boolean }>`
+export const Container = styled.nav<{ isOpen: boolean; isTop: boolean }>`
   width: 100%;
   height: 70px;
+
+  background-color: ${(props) => (props.isTop ? 'transparent' : '#0d0d0d')};
+  transition: background-color 0.3s ease-in-out;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  background: transparent;
   z-index: 9999;
 
   position: fixed;

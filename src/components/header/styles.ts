@@ -19,7 +19,6 @@ export const Container = styled.header`
   );
 
   position: relative;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 99.8%);
 
   img {
     height: 300px;
@@ -50,6 +49,12 @@ export const Container = styled.header`
     bottom: 80px;
     transform: scaleX(-1);
     -webkit-mask-image: linear-gradient(352deg, transparent 20%, black 77%);
+  }
+
+  @media (max-width: 900px) {
+    #img_3 {
+      right: -153px;
+    }
   }
 `;
 
@@ -85,9 +90,21 @@ export const Content = styled.div`
     border-radius: 4px;
     transition: background-color 0.3s ease, color 0.3s ease;
 
+    cursor: pointer;
+
     font-family: 'Poppins';
     width: 50%;
 
     margin-top: 20px;
+  }
+
+  @media (max-width: 900px) {
+    span {
+      font-size: 35px;
+      line-height: 35px;
+    }
+    p {
+      font-size: 14px;
+    }
   }
 `;
